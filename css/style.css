@@ -1,75 +1,116 @@
 /*
 COLORS:
-
 Light pink: #ffc2ca
 Medium pink: #db6574
 Dark pink: #bd4d5b
-
 */
 
 * {
-margin : 0;
-padding : 0;
-box-sizing : border-box;
-}
+    margin : 0;
+    padding : 0;
+    box-sizing : border-box;
+    }
+    
+    body
+    {
+    font-family : "Lato", sans-serif;
+    font-weight : 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777;
+    padding : 30px !important;
+    }
+    
+    .header {
+        height : 95vh;
+        background-image: linear-gradient(to right bottom, #ffc2cae3, #bd4d5ae3) ,url('../img/elegancy1.jpg');
+        background-size: cover;
+        background-position: top;
+        clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+        position: relative;
+    }
+    
+    .logo-box
+    {
+    position : absolute;
+    top: 20px;
+    left: 20px;
+    }
+    
+    .logo
+    {
+    height: 220px;
+    }
+    
+    .text-box
+    {
+        position: absolute;
+        top: 40%;
+        left: 60%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+    }
+    .heading-primary
+    {
+    color: #fff;
+    text-transform: uppercase;
+    }
+    
+    .heading-primary-main
+    {
+        display: block;
+        font-size: 50px;
+        font-weight: 400;
+        letter-spacing: 35px;
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+        
+        
+    }
+    
+    #heading-primary-sub
+    {
+        display: block;
+        font-size: 25px;
+        font-weight: 400;
+        letter-spacing: 24.5px;
+        animation-name: moveInRight;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+    }
 
-body
-{
-font-family : "Lato", sans-serif;
-font-weight : 400;
-font-size: 16px;
-line-height: 1.7;
-color: #777;
-padding : 30px !important;
-}
-
-.header {
-    height : 95vh;
-    background-image: linear-gradient(to right bottom, #ffc2cae3, #bd4d5ae3) ,url('../img/elegancy.jpg');
-    background-size: cover;
-    background-position: top;
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-    position: relative;
-}
-
-.logo-box
-{
-position : absolute;
-top: 20px;
-left: 20px;
-}
-
-.logo
-{
-height: 220px;
-}
-
-.text-box
-{
-    position: absolute;
-    top: 40%;
-    left: 60%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-}
-.heading-primary
-{
-color: #fff;
-text-transform: uppercase;
-}
-
-.heading-primary-main
-{
-    display: block;
-    font-size: 50px;
-    font-weight: 400;
-    letter-spacing: 35px;
-}
-
-#heading-primary-sub
-{
-    display: block;
-    font-size: 25px;
-    font-weight: 400;
-    letter-spacing: 24.5px;
-}
+    @keyframes moveInLeft
+    {
+        0% 
+        {
+           opacity: 0;
+           transform: translateX(-100px);
+        }
+        80%
+        {
+            transform: translateX(10px);
+        }
+        100%
+        {
+           opacity: 1;
+           transform: translate(0);
+        }
+    }
+    @keyframes moveInRight
+    {
+        0% 
+        {
+           opacity: 0;
+           transform: translateX(100px);
+        }
+        80%
+        {
+            transform: translateX(-10px);
+        }
+        100%
+        {
+           opacity: 1;
+           transform: translate(0);
+        }
+    }
